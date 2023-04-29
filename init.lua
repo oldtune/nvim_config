@@ -1,46 +1,67 @@
-local function notify_message(message)
-    vim.api.nvim_notify(message, vim.log.levels.INFO, {})
+require('mappings')
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
 end
 
-local function execute_command(command)
-    vim.cmd(command)
-end
+vim.opt.rtp:prepend(lazypath)
+require("lazy").setup({
+    {
+        "neovim/nvim-lspconfig",
+        config = function()
+            local lspconfig = require('lspconfig')
+            lspconfig.rust_analyzer.setup {
+                -- Server-specific settings. See `:help lspconfig-setup`
+                settings = {
+                    ['rust-analyzer'] = {},
+                },
+            }
+        end,
+    },
+    {
+        "williamboman/mason.nvim",
+        build = ":MasonUpdate", -- :MasonUpdate updates registry contents
+        config = function()
+        require("mason").setup()
+        end
+    }
+})
 
-local function inspect()
-    local input_value = vim.fn.input("Type the thing you want to inspect: ")
-    vim.cmd('lua print(vim.inspect(' .. input_value .. '))')
-end
+-- Use LspAttach autocommand to only map the following keys
+-- after the language server attaches to the current buffer
+vim.api.nvim_create_autocmd('LspAttach', {
+    group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+    callback = function(ev)
+        -- Enable completion triggered by <c-x><c-o>
+        vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
-local function execute_command_and_open_dialog(command, message)
-    execute_command(command)
-    notify_message(message)
-end
-
-local function toggle_relative_number()
-    vim.wo.relativenumber = vim.wo.relativenumber ~= true
-end
-
-vim.keymap.set('i', 'jk', '<Esc>')
-
-vim.keymap.set('n', '<C-r><C-r>',
-    function()
-        execute_command_and_open_dialog('so $MYVIMRC', 'Config reloaded')
-    end)
-
-vim.keymap.set('n', '<leader>ci',
-    function()
-        inspect()
+        -- Buffer local mappings.
+        -- See `:help vim.lsp.*` for documentation on any of the below functions
+        local opts = { buffer = ev.buf }
+        vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+        vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+        vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+        vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+        vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
+        vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
+        vim.keymap.set('n', '<space>wl', function()
+            print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+        end, opts)
+        vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
+        vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
+        vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
+        vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+        vim.keymap.set('n', '<space>f', function()
+            vim.lsp.buf.format { async = true }
+        end, opts)
     end,
-    { nowait = true })
-
-vim.keymap.set('n', '<leader>tln',
-    function()
-        toggle_relative_number()
-    end)
-
--- vim.api.nvim_del_keymap('n', '<C-r>')
-vim.keymap.set('n', 'U', ':redo<CR>')
-
-vim.wo.number = true
-vim.wo.relativenumber = true
-vim.g.mapleader = ' '
+})
