@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "ggandor/lightspeed.nvim",
+        "ggandor/leap.nvim",
         ignore_case = true,
         jump_to_unique_chars = true,
         substitute_chars = { ['\r'] = '¬', },
