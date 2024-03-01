@@ -10,3 +10,4 @@ option.number = true
 option.wrap = true
 option.smartcase = true
 option.ignorecase = true
+option.scrolloff = 10
