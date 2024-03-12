@@ -20,5 +20,18 @@ require("lazy").setup({
         substitute_chars = { ['\r'] = '¬', },
         highlight_unique_chars = true,
         grey_out_current_match = true,
-    }
+    },
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
 })
+
+require("mason").setup()
+require("mason-lspconfig").setup(
+    {
+        ensure_installed = { "lua_ls", "rust_analyzer", "angularls" },
+        automatic_installation = true
+    }
+)
+require("lspconfig").lua_ls.setup {}
+require("lspconfig").rust_analyzer.setup {}
