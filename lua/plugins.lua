@@ -21,17 +21,18 @@ require("lazy").setup({
         highlight_unique_chars = true,
         grey_out_current_match = true,
     },
+
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/nvim-cmp',         -- Autocompletion plugin
+    'hrsh7th/cmp-nvim-lsp',     -- LSP source for nvim-cmp
+    'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
+    'L3MON4D3/LuaSnip'          -- Snippets plugin
 })
 
-require("mason").setup()
-require("mason-lspconfig").setup(
-    {
-        ensure_installed = { "lua_ls", "rust_analyzer", "angularls" },
-        automatic_installation = true
-    }
-)
-require("lspconfig").lua_ls.setup {}
-require("lspconfig").rust_analyzer.setup {}
+require("plugins.lsp")
+require("plugins.autocomplete")

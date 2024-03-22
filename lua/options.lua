@@ -1,3 +1,5 @@
+vim.lsp.set_log_level("TRACE")
+
 local option = vim.o
 
 option.tabstop = 4
@@ -11,3 +13,4 @@ option.wrap = true
 option.smartcase = true
 option.ignorecase = true
 option.scrolloff = 10
+option.signcolumn = "number"
