@@ -3,7 +3,7 @@ require("mason").setup({
 
 require("mason-lspconfig").setup(
     {
-        ensure_installed = { "lua_ls", "rust_analyzer", "omnisharp" },
+        ensure_installed = { "lua_ls", "rust_analyzer", "omnisharp", "astro", "angularls", "tsserver", "html", "cssls", "dockerls", "jsonls" },
         automatic_installation = true,
     }
 )
@@ -16,6 +16,38 @@ lspconfig.lua_ls.setup {
 }
 
 lspconfig.rust_analyzer.setup {
+    capabilities = capabilities
+}
+
+lspconfig.omnisharp.setup {
+    capabilities = capabilities
+}
+
+lspconfig.astro.setup{
+    capabilities = capabilities
+}
+
+lspconfig.angularls.setup{
+    capabilities = capabilities
+}
+
+lspconfig.tsserver.setup{
+    capabilities = capabilities
+}
+
+lspconfig.html.setup{
+    capabilities = capabilities
+}
+
+lspconfig.cssls.setup{
+    capabilities = capabilities
+}
+
+lspconfig.dockerls.setup{
+    capabilities = capabilities
+}
+
+lspconfig.jsonls.setup{
     capabilities = capabilities
 }
 
