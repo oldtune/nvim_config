@@ -31,8 +31,24 @@ require("lazy").setup({
     'hrsh7th/nvim-cmp',         -- Autocompletion plugin
     'hrsh7th/cmp-nvim-lsp',     -- LSP source for nvim-cmp
     'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
-    'L3MON4D3/LuaSnip'          -- Snippets plugin
+    'L3MON4D3/LuaSnip',         -- Snippets plugin
+    'nvim-treesitter/nvim-treesitter',
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
+    {
+        "nvim-tree/nvim-tree.lua",
+        lazy = false,
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        }
+    },
 })
 
 require("plugins.lsp")
 require("plugins.autocomplete")
+require("plugins.treesitter")
+require("plugins.catpuccin")
+require("plugins.nvimtree")
