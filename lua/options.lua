@@ -1,4 +1,7 @@
 vim.lsp.set_log_level("TRACE")
+vim.wo.number = true
+vim.wo.relativenumber = true
+vim.g.mapleader = ' '
 
 local option = vim.o
 
