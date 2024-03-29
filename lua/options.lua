@@ -5,7 +5,7 @@ local option = vim.o
 option.tabstop = 4
 option.shiftwidth = 4
 option.softtabstop = 4
-option.noexpandtab = true
+-- option.noexpandtab = true
 option.expandtab = false
 option.autoindent = true
 option.number = true
@@ -14,3 +14,14 @@ option.smartcase = true
 option.ignorecase = true
 option.scrolloff = 10
 option.signcolumn = "number"
+
+vim.opt.listchars = {
+    tab = '>>',
+    -- lead = '·',
+    space = '·',
+    trail = '·',
+    eol = "⸙",
+    multispace = "···➸"
+}
+
+vim.opt.list = true

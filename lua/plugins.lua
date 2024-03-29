@@ -46,6 +46,11 @@ require("lazy").setup({
             "nvim-tree/nvim-web-devicons",
         }
     },
+    {
+        'nvim-telescope/telescope.nvim',
+        branch = '0.1.x',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    }
 })
 
 require("plugins.lsp")
@@ -53,3 +58,4 @@ require("plugins.autocomplete")
 require("plugins.treesitter")
 require("plugins.catpuccin")
 require("plugins.nvimtree")
+require("plugins.telescope")
