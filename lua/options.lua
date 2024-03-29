@@ -5,6 +5,7 @@ vim.g.mapleader = ' '
 
 local option = vim.o
 
+vim.opt.termguicolors = true
 option.tabstop = 4
 option.shiftwidth = 4
 option.softtabstop = 4

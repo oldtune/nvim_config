@@ -50,7 +50,8 @@ require("lazy").setup({
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' }
-    }
+    },
+    {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'}
 })
 
 require("plugins.lsp")
@@ -59,3 +60,4 @@ require("plugins.treesitter")
 require("plugins.catpuccin")
 require("plugins.nvimtree")
 require("plugins.telescope")
+require("plugins.bufferline")
