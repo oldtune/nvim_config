@@ -6,26 +6,34 @@ vim.g.mapleader = ' '
 local option = vim.o
 
 vim.opt.termguicolors = true
+-- nvim tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 option.tabstop = 4
 option.shiftwidth = 4
 option.softtabstop = 4
 -- option.noexpandtab = true
 option.expandtab = false
-option.autoindent = true
 option.number = true
-option.wrap = true
 option.smartcase = true
 option.ignorecase = true
 option.scrolloff = 10
 option.signcolumn = "number"
 
 vim.opt.listchars = {
-    tab = '>>',
+    -- tab = '>>',
     -- lead = '·',
     -- space = '·',
     trail = '·',
-    eol = "⸙",
-    multispace = "···➸"
+    -- eol = "⸙",
+    multispace = "│   "
 }
 
+option.autoindent = true
+option.wrap = true
 vim.opt.list = true
+vim.opt.breakindent = true
+vim.opt.linebreak = true
+vim.opt.showbreak = string.rep(" ", 3)
+vim.g.indentline_char = "│"
