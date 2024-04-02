@@ -1,5 +1,10 @@
 require("bufferline").setup {
     options=  {
-        numbers = "ordinal"
+        numbers = "ordinal",
+        hover = {
+            enabled = true,
+            delay = 0,
+            reveal = {'close'}
+        }
     }
 }
