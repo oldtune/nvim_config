@@ -21,14 +21,14 @@ option.ignorecase = true
 option.scrolloff = 10
 option.signcolumn = "number"
 
-vim.opt.listchars = {
-    -- tab = '>>',
-    -- lead = '·',
-    -- space = '·',
-    trail = '·',
-    -- eol = "⸙",
-    multispace = "│   "
-}
+-- vim.opt.listchars = {
+-- tab = '>>',
+-- lead = '·',
+-- space = '·',
+-- trail = '·',
+-- eol = "⸙",
+-- multispace = "│   "
+-- }
 
 option.autoindent = true
 option.wrap = true
@@ -36,4 +36,4 @@ vim.opt.list = true
 vim.opt.breakindent = true
 vim.opt.linebreak = true
 vim.opt.showbreak = string.rep(" ", 3)
-vim.g.indentline_char = "│"
+-- vim.g.indentline_char = "│"

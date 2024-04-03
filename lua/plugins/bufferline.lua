@@ -5,6 +5,7 @@ require("bufferline").setup {
             enabled = true,
             delay = 0,
             reveal = {'close'}
-        }
+        },
+        diagnostics = "nvim_lsp"
     }
 }

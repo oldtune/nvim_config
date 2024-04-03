@@ -34,7 +34,11 @@ require("lazy").setup({
     'L3MON4D3/LuaSnip',         -- Snippets plugin
     "nvim-tree/nvim-web-devicons",
     'nvim-treesitter/nvim-treesitter',
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000
+    },
     {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' }
@@ -51,7 +55,25 @@ require("lazy").setup({
         branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
-    {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'}
+    {
+        'akinsho/bufferline.nvim',
+        version = "*",
+        dependencies = 'nvim-tree/nvim-web-devicons'
+    },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        opts = {}
+    },
+    { 'kevinhwang91/nvim-hlslens' },
+    {
+        "ggandor/flit.nvim",
+        dependencies = { 'ggandor/leap.nvim', 'tpope/vim-repeat' }
+    },
+    {
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    }
 })
 
 require("plugins.lsp")
@@ -61,3 +83,8 @@ require("plugins.catpuccin")
 require("plugins.nvimtree")
 require("plugins.telescope")
 require("plugins.bufferline")
+require("plugins.indentblankline")
+require("plugins.hlslens")
+require("plugins.flit")
+require('plugins.trouble')
+require('plugins.lualine')
