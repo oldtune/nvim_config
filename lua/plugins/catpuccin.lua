@@ -49,3 +49,8 @@ require("catppuccin").setup({
 
 -- setup must be called before loading
 vim.cmd.colorscheme "catppuccin"
+vim.api.nvim_command("hi LineNr guifg=#5DE23C")
+vim.api.nvim_command("hi CursorLineNr guifg=#A020F0")
+vim.api.nvim_command("hi CursorLineNr guibg=#ff930f")
+vim.api.nvim_command("hi Cursor guifg=#A020F0")
+vim.api.nvim_command("hi Cursor guibg=#ff930f")

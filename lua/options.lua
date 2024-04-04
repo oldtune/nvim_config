@@ -2,7 +2,8 @@ vim.lsp.set_log_level("TRACE")
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.g.mapleader = ' '
-
+vim.o.background = 'dark'
+vim.o.guifont = "FiraCode NF:h10"
 local option = vim.o
 
 vim.opt.termguicolors = true
@@ -37,3 +38,5 @@ vim.opt.breakindent = true
 vim.opt.linebreak = true
 vim.opt.showbreak = string.rep(" ", 3)
 -- vim.g.indentline_char = "│"
+vim.opt.cursorline = true
+-- vim.api.nvim_set_hl_attr(nil, "LineNr", { guifg = "#5DE23C" })

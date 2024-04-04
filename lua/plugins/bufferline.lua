@@ -1,11 +1,14 @@
 require("bufferline").setup {
-    options=  {
+    options = {
         numbers = "ordinal",
+        enforce_regular_tabs = true,
+        always_show_bufferline = true,
         hover = {
             enabled = true,
             delay = 0,
-            reveal = {'close'}
+            reveal = { 'close' },
         },
-        diagnostics = "nvim_lsp"
+        diagnostics = "nvim_lsp",
+        offsets = { { filetype = "NvimTree", text = "", padding = 0 } }
     }
 }
