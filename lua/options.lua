@@ -3,7 +3,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 vim.g.mapleader = ' '
 vim.o.background = 'dark'
-vim.o.guifont = "FiraCode NF:h10"
+vim.o.guifont = "FiraCode Nerd Font:h10"
 local option = vim.o
 
 vim.opt.termguicolors = true
