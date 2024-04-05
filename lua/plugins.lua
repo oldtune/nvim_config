@@ -74,6 +74,10 @@ require("lazy").setup({
         "folke/trouble.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
+    {
+        'mfussenegger/nvim-dap'
+    },
+    { 'tpope/vim-commentary' }
 })
 
 require("plugins.lsp")

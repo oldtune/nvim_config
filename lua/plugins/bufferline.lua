@@ -5,7 +5,7 @@ require("bufferline").setup {
         always_show_bufferline = true,
         hover = {
             enabled = true,
-            delay = 0,
+            delay = 1,
             reveal = { 'close' },
         },
         diagnostics = "nvim_lsp",
