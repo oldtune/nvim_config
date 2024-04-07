@@ -84,6 +84,12 @@ require("lazy").setup({
         config = true
         -- use opts = {} for passing setup options
         -- this is equalent to setup({}) function
+    },
+    { 'akinsho/toggleterm.nvim', version = "*", config = true },
+    {
+        "kylechui/nvim-surround",
+        version = "*", -- Use for stability; omit to use `main` branch for the latest features
+        event = "VeryLazy"
     }
 })
 
@@ -99,3 +105,4 @@ require("plugins.hlslens")
 require("plugins.flit")
 require('plugins.trouble')
 require('plugins.lualine')
+require('plugins.surround')

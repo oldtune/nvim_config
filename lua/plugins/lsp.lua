@@ -16,38 +16,38 @@ lspconfig.lua_ls.setup {
 }
 
 lspconfig.rust_analyzer.setup {
-    capabilities = capabilities
+    capabilities = capabilities 
 }
 
 lspconfig.omnisharp.setup {
+    capabilities = capabilities    
+}
+
+lspconfig.astro.setup {
     capabilities = capabilities
 }
 
-lspconfig.astro.setup{
+lspconfig.angularls.setup {
     capabilities = capabilities
 }
 
-lspconfig.angularls.setup{
+lspconfig.tsserver.setup {
     capabilities = capabilities
 }
 
-lspconfig.tsserver.setup{
+lspconfig.html.setup {
     capabilities = capabilities
 }
 
-lspconfig.html.setup{
+lspconfig.cssls.setup {
     capabilities = capabilities
 }
 
-lspconfig.cssls.setup{
+lspconfig.dockerls.setup {
     capabilities = capabilities
 }
 
-lspconfig.dockerls.setup{
-    capabilities = capabilities
-}
-
-lspconfig.jsonls.setup{
+lspconfig.jsonls.setup {
     capabilities = capabilities
 }
 
