@@ -16,11 +16,12 @@ lspconfig.lua_ls.setup {
 }
 
 lspconfig.rust_analyzer.setup {
-    capabilities = capabilities 
+    capabilities = capabilities
 }
 
 lspconfig.omnisharp.setup {
-    capabilities = capabilities    
+    capabilities = capabilities,
+    filetypes = { 'cs', 'vb', 'cshtml' }
 }
 
 lspconfig.astro.setup {

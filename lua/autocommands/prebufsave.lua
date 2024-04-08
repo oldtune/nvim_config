@@ -1,6 +1,7 @@
-vim.api.nvim_create_autocmd("BufWritePre", {
-    callback = function(ev)
-        vim.lsp.buf.format { async = true }
-    end
-}
-)
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+    -- callback = function(client, bufnr)
+    -- if client and client.support_formats()
+    --     vim.lsp.buf.format { async = true, silent = false }
+    -- end
+-- }
+-- )

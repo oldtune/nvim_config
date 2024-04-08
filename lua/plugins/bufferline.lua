@@ -1,7 +1,7 @@
 require("bufferline").setup {
     options = {
         numbers = "ordinal",
-        enforce_regular_tabs = true,
+        enforce_regular_tabs = false,
         always_show_bufferline = true,
         hover = {
             enabled = true,
