@@ -1,0 +1,3 @@
+-- vim.keymap.set('n', '<leader>\\', function()
+--     vim.api.nvim_command('LspSaga finder')
+-- end)

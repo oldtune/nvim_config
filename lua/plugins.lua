@@ -90,6 +90,21 @@ require("lazy").setup({
         "kylechui/nvim-surround",
         version = "*", -- Use for stability; omit to use `main` branch for the latest features
         event = "VeryLazy"
+    },
+    {
+        "nvim-treesitter/nvim-treesitter-refactor",
+        dependencies = { 'nvim-treesitter/nvim-treesitter' }
+    },
+    -- {
+    --     'nvimdev/lspsaga.nvim',
+    --     dependencies = {
+    --         'nvim-treesitter/nvim-treesitter',
+    --         'nvim-tree/nvim-web-devicons',
+    --     }
+    -- }
+    {
+        'nvim-telescope/telescope-ui-select.nvim',
+        dependencies = { 'nvim-telescope/telescope.nvim', }
     }
 })
 
@@ -106,3 +121,6 @@ require("plugins.flit")
 require('plugins.trouble')
 require('plugins.lualine')
 require('plugins.surround')
+require("plugins.nvimtreesitterrefactor")
+-- require("plugins.lspsaga")
+require("plugins.telescopeuiselect")
