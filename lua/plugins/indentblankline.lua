@@ -24,6 +24,7 @@ end)
 require("ibl").setup({
     indent = {
         highlight = highlight,
-        char      = "│"
+        char      = "│",
+        tab_char = "│"
     }
 })
