@@ -105,7 +105,8 @@ require("lazy").setup({
     {
         'nvim-telescope/telescope-ui-select.nvim',
         dependencies = { 'nvim-telescope/telescope.nvim', }
-    }
+    },
+    {"hrsh7th/cmp-nvim-lsp-signature-help"}
 })
 
 require("plugins.lsp")

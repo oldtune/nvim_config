@@ -41,15 +41,17 @@ cmp.setup {
             end
         end, { 'i', 's' }),
     }),
-    -- sources = {
-    --     { name = 'nvim_lsp' },
-    --     { name = 'luasnip' },
-    -- },
-    sources = cmp.config.sources({
-            { name = 'nvim_lsp' },
-            { name = 'luasnip' },
-        },
-        {
-            { name = 'buffer' }
-        })
+    sources = {
+        { name = 'nvim_lsp' },
+        { name = 'nvim_lsp_signature_help' },
+        { name = 'luasnip' },
+        { name = 'buffer' },
+    },
+    -- sources = cmp.config.sources({
+    --         { name = 'nvim_lsp' },
+    --         { name = 'luasnip' },
+    --     },
+    --     {
+    --         { name = 'buffer' }
+    --     })
 }
