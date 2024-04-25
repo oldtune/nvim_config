@@ -3,6 +3,7 @@ require("nvim-tree").setup({
     update_focused_file = {
         enable = true,
     },
+    view = { adaptive_size = true },
     diagnostics = {
         enable = true,
         show_on_dirs = false,
