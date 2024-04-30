@@ -54,9 +54,9 @@ lspconfig.jsonls.setup {
 
 vim.diagnostic.config({
     underline = true,
-    virtual_text = true,
+    virtual_text = false,
     signs = true,
     float = true,
     update_in_insert = false,
-    severity_sort = false
+    severity_sort = true
 })

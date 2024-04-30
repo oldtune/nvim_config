@@ -1,4 +1,4 @@
-vim.lsp.set_log_level("TRACE")
+vim.lsp.set_log_level("off")
 vim.wo.number            = true
 vim.wo.relativenumber    = true
 vim.g.mapleader          = ' '
@@ -20,7 +20,7 @@ option.number            = true
 option.smartcase         = true
 option.ignorecase        = true
 option.scrolloff         = 10
-option.signcolumn        = "yes"
+option.signcolumn        = "yes:2"
 vim.opt.updatetime       = 750
 -- vim.opt.listchars = {
 -- tab = '>>',

@@ -111,7 +111,8 @@ require("lazy").setup({
         "tpope/vim-fugitive",
         requires = { "nvim-telescope/telescope.nvim" }
     },
-    { "lewis6991/gitsigns.nvim" }
+    { "lewis6991/gitsigns.nvim" },
+    { 'numToStr/Comment.nvim' }
 })
 
 require("plugins.lsp")
@@ -132,3 +133,5 @@ require("plugins.nvimtreesitterrefactor")
 -- require("plugins.lspsaga")
 require("plugins.telescopeuiselect")
 require('plugins.gitsigns')
+require('plugins.comment')
+require('plugins.dap')

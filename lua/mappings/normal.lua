@@ -7,3 +7,7 @@ vim.keymap.set('n', 'x', '"+x', { noremap = true })
 vim.keymap.set('n', 's', function()
     require('leap').leap { target_windows = { vim.api.nvim_get_current_win() } }
 end)
+vim.keymap.set('n','<C-w>', function()
+    vim.api.nvim_command('wa')
+end)
+
