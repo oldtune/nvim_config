@@ -1,8 +1,8 @@
 local lsp = require('lspconfig')
 vim.keymap.set('n', '<leader>/', function()
-lsp.command('comment')
+    lsp.command('comment')
 end)
 
 vim.keymap.set('n', '<leader>?', function()
-lsp.command('uncomment')
+    lsp.command('uncomment')
 end)

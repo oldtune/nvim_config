@@ -85,7 +85,7 @@ require("lazy").setup({
         -- use opts = {} for passing setup options
         -- this is equalent to setup({}) function
     },
-    { 'akinsho/toggleterm.nvim', version = "*", config = true },
+    { 'akinsho/toggleterm.nvim',            version = "*", config = true },
     {
         "kylechui/nvim-surround",
         version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -106,7 +106,12 @@ require("lazy").setup({
         'nvim-telescope/telescope-ui-select.nvim',
         dependencies = { 'nvim-telescope/telescope.nvim', }
     },
-    {"hrsh7th/cmp-nvim-lsp-signature-help"}
+    { "hrsh7th/cmp-nvim-lsp-signature-help" },
+    {
+        "tpope/vim-fugitive",
+        requires = { "nvim-telescope/telescope.nvim" }
+    },
+    { "lewis6991/gitsigns.nvim" }
 })
 
 require("plugins.lsp")
@@ -123,5 +128,7 @@ require('plugins.trouble')
 require('plugins.lualine')
 require('plugins.surround')
 require("plugins.nvimtreesitterrefactor")
+-- require("plugins.vimfugitive")
 -- require("plugins.lspsaga")
 require("plugins.telescopeuiselect")
+require('plugins.gitsigns')
