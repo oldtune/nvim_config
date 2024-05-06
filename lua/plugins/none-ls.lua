@@ -18,6 +18,7 @@ return {
       null_ls.builtins.formatting.prettier,
       null_ls.builtins.formatting.rustfmt,
       null_ls.builtins.formatting.csharpier,
+      null_ls.builtins.formatting.gofmt 
     }
     return config -- return final config table
   end,
