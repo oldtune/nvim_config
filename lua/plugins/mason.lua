@@ -22,6 +22,7 @@ return {
         "cssls",
         "dockerls",
         "jsonls",
+        "eslint"
         -- add more arguments for adding more language servers
       })
     end,
