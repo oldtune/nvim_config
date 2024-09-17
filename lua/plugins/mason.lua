@@ -38,7 +38,7 @@ return {
         "stylua",
         "rustfmt",
         "csharpier",
-        "gofmt"
+        "gofmt",
         -- add more arguments for adding more null-ls sources
       })
     end,
@@ -53,7 +53,7 @@ return {
         "chrome",
         "js",
         "coreclr",
-        "vscode-go"
+        "vscode-go",
         -- add more arguments for adding more debuggers
       })
     end,
