@@ -16,13 +16,14 @@ return {
         "omnisharp",
         "astro",
         "angularls",
-        "tsserver",
+        -- "tsserver",
+        "ts_ls",
         "html",
         "gopls",
         "cssls",
         "dockerls",
         "jsonls",
-        "eslint"
+        "eslint",
         -- add more arguments for adding more language servers
       })
     end,
