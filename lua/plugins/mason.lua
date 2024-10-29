@@ -16,7 +16,6 @@ return {
         "omnisharp",
         "astro",
         "angularls",
-        -- "tsserver",
         "ts_ls",
         "html",
         "gopls",
