@@ -37,7 +37,7 @@ return {
         "prettier",
         "stylua",
         "rustfmt",
-        "csharpier",
+        -- "csharpier",
         "gofmt",
         -- add more arguments for adding more null-ls sources
       })

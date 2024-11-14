@@ -16,7 +16,7 @@ return {
       -- Set a formatter
       null_ls.builtins.formatting.stylua,
       null_ls.builtins.formatting.prettier,
-      null_ls.builtins.formatting.csharpier,
+      -- null_ls.builtins.formatting.csharpier,
       null_ls.builtins.formatting.gofmt
     }
     return config -- return final config table
