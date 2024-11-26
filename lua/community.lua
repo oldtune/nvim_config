@@ -10,5 +10,6 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.nvim-surround" },
+  { import = "astrocommunity.fuzzy-finder.fzf-lua" }
   -- import/override with your plugins folder
 }
