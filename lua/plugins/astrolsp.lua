@@ -56,6 +56,37 @@ return {
                 enable = false,
               },
             },
+            inlayHints = {
+              bindingModeHints = {
+                enable = true
+              },
+              chainingHints = {
+                enable = true
+              },
+              closingBraceHints = {
+                enable = true,
+                minLines = 15
+              },
+              closureReturnTypeHints = {
+                enable = "with_block"
+              },
+              lifetimeElisionHints = {
+                enable = "skip_trivial",
+                useParameterNames = false
+              },
+              parameterHints = {
+                enable = true
+              },
+              reborrowHints = {
+                enable = "always"
+              },
+              renderColons = true,
+              typeHints = {
+                enable = true,
+                hideClosureInitialization = false,
+                hideNamedConstructor = true
+              }
+            }
           },
         },
       },
