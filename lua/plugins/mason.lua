@@ -15,8 +15,9 @@ return {
         "lua-language-server",
         "rust-analyzer",
         "astro-language-server",
-        "typescript-language-server", 
+        "typescript-language-server",
         "html-lsp",
+        "csharp-language-server",
         -- install formatters
         "stylua",
         -- install debuggers
